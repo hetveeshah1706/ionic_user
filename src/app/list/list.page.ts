@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { BatchService } from '../batch.service';
+import { Batch } from './batchclass';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-list',
@@ -6,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['list.page.scss']
 })
 export class ListPage implements OnInit {
+batch_arr:Batch[]=[];
   private selectedItem: any;
   private icons = [
     'flask',
@@ -20,7 +25,7 @@ export class ListPage implements OnInit {
     'build'
   ];
   public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
+  constructor(private _data:BatchService,public _route:Router) {
     for (let i = 1; i < 11; i++) {
       this.items.push({
         title: 'Item ' + i,
@@ -29,8 +34,17 @@ export class ListPage implements OnInit {
       });
     }
   }
+  clickMe(batch_id:number){
+    console.log(batch_id);
+    this._route.navigate(['/listdetail',batch_id]);
+  }
 
   ngOnInit() {
+    this._data.getAllBatch().subscribe(
+      (data:Batch[])=>{
+          this.batch_arr=data;
+      }
+    );
   }
   // add back when alpha.4 is out
   // navigate(item) {

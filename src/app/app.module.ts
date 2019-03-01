@@ -1,21 +1,35 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { HttpClientModule } from '@angular/common/http';
+import { IonicModule, IonicRouteStrategy, IonInfiniteScroll } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { NgCalendarModule } from "ionic2-calendar";
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+//import { HeaderPage } from './header/header.page';
+//import { HeaderPage } from './header/header.page';
+import { IonicStorageModule } from "@ionic/storage";
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [
+    AppComponent,
+    
+  ],
+  entryComponents: [
+    
+  ],
   imports: [
+    NgCalendarModule,
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    IonicStorageModule.forRoot()
+    
+    //HeaderPage
+    //HeaderPage
   ],
   providers: [
     StatusBar,

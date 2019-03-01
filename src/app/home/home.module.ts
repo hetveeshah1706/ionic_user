@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
-
+//import { HeaderPage } from '../header/header.page';
 @NgModule({
   imports: [
     CommonModule,
