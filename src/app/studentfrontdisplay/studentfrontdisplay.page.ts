@@ -14,12 +14,20 @@ export class StudentfrontdisplayPage implements OnInit {
   student_password:string;
   student_image:string;
   student_id:string;
+  
   onNotice(){
     this._route.navigate(['/notice']);
+  }
+  onAttendance(){
+    this._route.navigate(['/attendance']);
   }
   onMyProfile(){
     this._route.navigate(['/studentpersonaldetails']);
   }
+  onDailyWork(){
+    this._route.navigate(['/dailywork']);
+  }
+
   ngOnInit() {
  this.student_id=localStorage.getItem('student_id')
     this._ser.getstudentFront(this.student_id).subscribe(

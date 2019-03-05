@@ -114,13 +114,17 @@
                    <h3> STANDARD: {{standard_no}}</h3>
                </ion-label><br>
                <ion-label>
-                    <h3> DOB: {{date_of_birth}}</h3>
+                    <h3> DOB: {{date_of_birth | date:"MM/dd/yyyy"}}</h3>
                 </ion-label>
       </ion-card>
       <ion-card>
-          <ion-label><h3>BATCH NAME::{{batch_name}}</h3></ion-label>
-          <ion-label><h3>SUBJECT:{{subject_name}}</h3></ion-label>
+          <ion-label><h3>BATCH NAME::{{batch_name}}</h3></ion-label><br>
+          <ion-label>ADOPTED SUBJECT:<h3 *ngFor="let item of subject_arr">{{item.subject_name}}</h3></ion-label><br>
+          <ion-label><h3>JOINING DATE:{{joining_date | date:"MM/dd/yyyy"}}</h3></ion-label><br>
       </ion-card>
+    
+
+
       
       
       

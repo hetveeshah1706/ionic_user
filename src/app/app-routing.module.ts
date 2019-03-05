@@ -25,7 +25,12 @@ const routes: Routes = [
   { path: 'footer', loadChildren: './footer/footer.module#FooterPageModule' },
   { path: 'notice', loadChildren: './notice/notice.module#NoticePageModule' },
   { path: 'notice-discreption/:notice_id', loadChildren: './notice-discreption/notice-discreption.module#NoticeDiscreptionPageModule' },
-  { path: 'studentpersonaldetails', loadChildren: './studentpersonaldetails/studentpersonaldetails.module#StudentpersonaldetailsPageModule' }
+  { path: 'studentpersonaldetails', loadChildren: './studentpersonaldetails/studentpersonaldetails.module#StudentpersonaldetailsPageModule' },
+  { path: 'dailywork', loadChildren: './dailywork/dailywork.module#DailyworkPageModule' },
+  { path: 'dailysubjectdisplay/:subject_id', loadChildren: './dailysubjectdisplay/dailysubjectdisplay.module#DailysubjectdisplayPageModule' },
+  { path: 'pdf-open/:pdf', loadChildren: './pdf-open/pdf-open.module#PdfOpenPageModule' },
+  
+
 ];
 
 @NgModule({
