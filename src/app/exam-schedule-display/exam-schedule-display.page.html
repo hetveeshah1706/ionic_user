@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title align="center">EXAM SCHEDULE DISPLAY</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card *ngFor="let item of exam_schedule_arr">
+        <!-- <ion-card-content>
+                STUDENT NAME: {{student_name}}
+               </ion-card-content> -->
+               
+               <ion-label>
+                   <h3> BATCH NAME: {{item.batch_name}}</h3>
+               </ion-label>
+               <ion-label>
+                   <h3> SUBJECT NAME: {{item.subject_name}}</h3>
+               </ion-label>
+               <ion-label>
+                    <h3> EXAM DATE: {{item.exam_date | date:"MM/dd/yyyy"}}</h3>
+                </ion-label>
+                <ion-label>
+                    <h3> MARKS: {{item.marks}}</h3>
+                </ion-label>
+                <ion-label>
+                    <h3> HOURS: {{item.hours}}</h3>
+                </ion-label>
+              
+      </ion-card>
+    
+  </ion-content>

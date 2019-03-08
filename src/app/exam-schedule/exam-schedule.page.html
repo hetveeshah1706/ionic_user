@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title align="center">EXAM SCHEDULE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button *ngFor="let item of batch_arr" (click)="onExamSchedule(item.batch_id)">{{item.batch_name}}</ion-button><br>
+  <ion-button  align="center" (click)="onExamResult()">SHOW RESULT</ion-button>
+</ion-content>

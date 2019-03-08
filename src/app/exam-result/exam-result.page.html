@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title align="center">EXAM RESULT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card *ngFor="let item of exam_result_arr">
+        <ion-label>
+                <h3>STUDENT NAME: {{item.student_name}}</h3>
+        </ion-label>
+        <ion-label>
+            <h3>SUBJECT NAME: {{item.subject_name}}</h3>
+        </ion-label>
+        <ion-label>
+            <h3>STANDARD: {{item.standard_no}}</h3>
+        </ion-label>
+        <ion-label>
+            <h3> EXAM TAKEN ON: {{item.exam_date | date:"MM/dd/yyyy"}}</h3>
+        </ion-label>
+        <ion-label>
+            <h3> DURATION WAS: {{item.hours}}</h3>
+        </ion-label>
+        <ion-label>
+              <h3> TOTAL MARKS: {{item.marks}}</h3>
+        </ion-label>
+        <ion-label>
+            <h3> MARKS OBTAINED: {{item.marks_obtained}}</h3>
+      </ion-label>
+      </ion-card>
+</ion-content>

@@ -30,7 +30,9 @@ export class StudentfrontdisplayPage implements OnInit {
   onAssignment(){
     this._route.navigate(['/assignment']);
   }
-
+  onExam(){
+    this._route.navigate(['/exam-schedule']);
+  }
   ngOnInit() {
  this.student_id=localStorage.getItem('student_id')
     this._ser.getstudentFront(this.student_id).subscribe(

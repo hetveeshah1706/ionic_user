@@ -31,6 +31,11 @@ const routes: Routes = [
   { path: 'pdf-open/:pdf', loadChildren: './pdf-open/pdf-open.module#PdfOpenPageModule' },
   { path: 'assignment', loadChildren: './assignment/assignment.module#AssignmentPageModule' },
   { path: 'assignmentdisplay/:subject_id', loadChildren: './assignmentdisplay/assignmentdisplay.module#AssignmentdisplayPageModule' },
+  { path: 'exam-schedule', loadChildren: './exam-schedule/exam-schedule.module#ExamSchedulePageModule' },
+  { path: 'exam-schedule-display/:batch_id', loadChildren: './exam-schedule-display/exam-schedule-display.module#ExamScheduleDisplayPageModule' },  { path: 'exam-result', loadChildren: './exam-result/exam-result.module#ExamResultPageModule' },
+
+
+
 
   
 
