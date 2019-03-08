@@ -27,6 +27,9 @@ export class StudentfrontdisplayPage implements OnInit {
   onDailyWork(){
     this._route.navigate(['/dailywork']);
   }
+  onAssignment(){
+    this._route.navigate(['/assignment']);
+  }
 
   ngOnInit() {
  this.student_id=localStorage.getItem('student_id')
